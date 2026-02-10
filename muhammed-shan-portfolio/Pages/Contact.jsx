@@ -84,7 +84,7 @@ const ContactPage = () => {
             </div>
             <div className={`w-full h-[500px] md:h-[800px] rounded-2xl border overflow-hidden ${isDarkMode ? 'border-[#1a1a1a]' : 'border-neutral-200 shadow-lg'}`}>
               <iframe
-                src="/muhammed-shan-resume.pdf#view=FitH"
+                src="/Resume.pdf#view=FitH"
                 width="100%"
                 height="100%"
                 className={`${isDarkMode ? 'invert-[0.05] grayscale-[0.1]' : ''} border-none`}
@@ -94,7 +94,7 @@ const ContactPage = () => {
 
             <div className="mt-4 flex justify-center md:hidden">
               <a
-                href="/Muhammed-Shan-resume.pdf"
+                href="/Resume.pdf"
                 download
                 className="text-[12px] font-medium text-blue-500 underline"
               >
