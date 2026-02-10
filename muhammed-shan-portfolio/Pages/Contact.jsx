@@ -18,8 +18,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className={`flex flex-col min-h-screen transition-colors duration-500 ${
-        isDarkMode ? 'bg-[#050505] text-[#a1a1a1]' : 'bg-[#fafafa] text-neutral-600'
+    <div className={`flex flex-col min-h-screen transition-colors duration-500 ${isDarkMode ? 'bg-[#050505] text-[#a1a1a1]' : 'bg-[#fafafa] text-neutral-600'
       } font-sans antialiased`}
     >
       <Header />
@@ -36,11 +35,10 @@ const ContactPage = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Action Card */}
-          <div 
+          <div
             onClick={handleSendMail}
-            className={`lg:col-span-2 group cursor-pointer p-8 rounded-2xl border transition-all duration-300 ${
-              isDarkMode ? 'bg-[#0a0a0a] border-[#1a1a1a] hover:border-blue-500/50' : 'bg-white border-neutral-200 hover:border-blue-500/50 shadow-sm'
-            }`}
+            className={`lg:col-span-2 group cursor-pointer p-8 rounded-2xl border transition-all duration-300 ${isDarkMode ? 'bg-[#0a0a0a] border-[#1a1a1a] hover:border-blue-500/50' : 'bg-white border-neutral-200 hover:border-blue-500/50 shadow-sm'
+              }`}
           >
             <div className="flex justify-between items-start mb-12">
               <div className={`p-3 rounded-lg ${isDarkMode ? 'bg-[#111]' : 'bg-neutral-100'}`}>
@@ -57,9 +55,8 @@ const ContactPage = () => {
             {/* Social Links */}
             {socialLinks.map((link) => (
               <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer"
-                className={`flex items-center justify-between p-4 rounded-xl border transition-all duration-300 ${
-                  isDarkMode ? 'bg-[#0a0a0a] border-[#1a1a1a] hover:bg-[#111] text-white' : 'bg-white border-neutral-200 hover:bg-neutral-50 text-black shadow-sm'
-                }`}
+                className={`flex items-center justify-between p-4 rounded-xl border transition-all duration-300 ${isDarkMode ? 'bg-[#0a0a0a] border-[#1a1a1a] hover:bg-[#111] text-white' : 'bg-white border-neutral-200 hover:bg-neutral-50 text-black shadow-sm'
+                  }`}
               >
                 <div className="flex items-center gap-3 text-[13px] font-medium">{link.icon} {link.name}</div>
                 <ArrowUpRight size={14} className="opacity-40" />
@@ -67,11 +64,10 @@ const ContactPage = () => {
             ))}
 
             {/* Resume Trigger */}
-            <button 
+            <button
               onClick={() => setShowResume(!showResume)}
-              className={`flex items-center justify-between w-full p-4 rounded-xl border transition-all duration-300 ${
-                isDarkMode ? 'bg-[#0a0a0a] border-[#1a1a1a] hover:bg-[#111] text-white' : 'bg-white border-neutral-200 hover:bg-neutral-50 text-black shadow-sm'
-              }`}
+              className={`flex items-center justify-between w-full p-4 rounded-xl border transition-all duration-300 ${isDarkMode ? 'bg-[#0a0a0a] border-[#1a1a1a] hover:bg-[#111] text-white' : 'bg-white border-neutral-200 hover:bg-neutral-50 text-black shadow-sm'
+                }`}
             >
               <div className="flex items-center gap-3 text-[13px] font-medium"><FileText size={16} /> Resume</div>
               <Eye size={14} className="opacity-40" />
@@ -83,23 +79,33 @@ const ContactPage = () => {
         {showResume && (
           <div className="mt-12 animate-in fade-in slide-in-from-top-4 duration-500">
             <div className="flex justify-between items-center mb-4">
-               <h3 className={`text-sm font-semibold ${isDarkMode ? 'text-white' : 'text-black'}`}>Preview: Muhammed_Shan_Resume.pdf</h3>
-               <button onClick={() => setShowResume(false)} className="p-1 hover:text-red-500"><X size={18} /></button>
+              <h3 className={`text-sm font-semibold ${isDarkMode ? 'text-white' : 'text-black'}`}>Preview: Muhammed_Shan_Resume.pdf</h3>
+              <button onClick={() => setShowResume(false)} className="p-1 hover:text-red-500"><X size={18} /></button>
             </div>
-            <div className={`w-full h-[600px] rounded-2xl border overflow-hidden ${isDarkMode ? 'border-[#1a1a1a]' : 'border-neutral-200 shadow-lg'}`}>
-              <iframe 
-                src="/Muhammed-Shan-resume.pdf" // Change this to your exact filename in public folder
-                width="100%" 
-                height="100%" 
-                className={isDarkMode ? 'invert-[0.05] grayscale-[0.1]' : ''}
+            <div className={`w-full h-[500px] md:h-[800px] rounded-2xl border overflow-hidden ${isDarkMode ? 'border-[#1a1a1a]' : 'border-neutral-200 shadow-lg'}`}>
+              <iframe
+                src="/muhammed-shan-resume.pdf#view=FitH"
+                width="100%"
+                height="100%"
+                className={`${isDarkMode ? 'invert-[0.05] grayscale-[0.1]' : ''} border-none`}
                 title="Resume Viewer"
               />
+            </div>
+
+            <div className="mt-4 flex justify-center md:hidden">
+              <a
+                href="/Muhammed-Shan-resume.pdf"
+                download
+                className="text-[12px] font-medium text-blue-500 underline"
+              >
+                Can't see the preview? Download PDF
+              </a>
             </div>
           </div>
         )}
 
         <div className="mt-16 pt-8 border-t border-transparent flex justify-center">
-            <p className="text-[12px] uppercase tracking-widest opacity-50">Based in Kerala, India • Available Worldwide</p>
+          <p className="text-[12px] uppercase tracking-widest opacity-50">Based in Kerala, India • Available Worldwide</p>
         </div>
       </main>
       <Footer />
