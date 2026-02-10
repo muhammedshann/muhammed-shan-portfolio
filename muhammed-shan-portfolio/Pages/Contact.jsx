@@ -2,125 +2,97 @@ import React from 'react';
 import Header from '../src/Components/Header';
 import Footer from '../src/Components/Footer';
 import { useTheme } from '../src/ThemeContext';
+import { Mail, Linkedin, Github, FileText, ArrowUpRight } from 'lucide-react'; // Optional: install lucide-react
 
 const ContactPage = () => {
   const { isDarkMode } = useTheme();
-  const links = ['Email', 'LinkedIn', 'GitHub', 'Resume'];
+
+  const socialLinks = [
+    { name: 'LinkedIn', icon: <Linkedin size={16} />, url: '#' },
+    { name: 'GitHub', icon: <Github size={16} />, url: '#' },
+    { name: 'Resume', icon: <FileText size={16} />, url: '#' },
+  ];
+
+  const handleSendMail = () => {
+    window.location.href = "mailto:muhammedshan930o@gmail.com?subject=Contact from Portfolio";
+  };
 
   return (
-    <div className={`flex flex-col min-h-screen transition-colors duration-300 ${
-      isDarkMode ? 'bg-black text-[#888888]' : 'bg-white text-neutral-600'
-    } font-sans antialiased`}>
-      
-      {/* 1. Header */}
+    <div
+      className={`flex flex-col min-h-screen transition-colors duration-500 ${
+        isDarkMode ? 'bg-[#050505] text-[#a1a1a1]' : 'bg-[#fafafa] text-neutral-600'
+      } font-sans antialiased`}
+    >
       <Header />
 
-      {/* 2. Main content grows to push footer down */}
-      <main className="flex-grow max-w-5xl mx-auto px-6 mt-16 w-full">
-        <h1 className={`text-[28px] font-bold mb-12 transition-colors ${
-          isDarkMode ? 'text-white' : 'text-black'
-        }`}>
-          Contact
-        </h1>
+      <main className="flex-grow max-w-4xl mx-auto px-6 mt-24 mb-20 w-full">
+        {/* Header Section */}
+        <header className="mb-16">
+          <h1 className={`text-4xl font-bold tracking-tight mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+            Get in touch<span className="text-blue-500">.</span>
+          </h1>
+          <p className="text-lg max-w-xl">
+            Have a project in mind or just want to say hi? I'm always open to discussing new opportunities and creative ideas.
+          </p>
+        </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
-          {/* Left Column: Form */}
-          <section className="space-y-5">
-            <div>
-              <label className={`block text-[13px] font-medium mb-2 ${
-                isDarkMode ? 'text-white' : 'text-black'
-              }`}>
-                Name
-              </label>
-              <input 
-                type="text" 
-                placeholder="Your Name"
-                className={`w-full border rounded-md px-3 py-2 text-[13px] focus:outline-none transition-colors ${
-                  isDarkMode 
-                  ? 'bg-black border-[#222] text-white focus:border-[#444] placeholder:text-[#444]' 
-                  : 'bg-neutral-50 border-neutral-200 text-black focus:border-neutral-400 placeholder:text-neutral-400'
-                }`}
-              />
-            </div>
-
-            <div>
-              <label className={`block text-[13px] font-medium mb-2 ${
-                isDarkMode ? 'text-white' : 'text-black'
-              }`}>
-                Email
-              </label>
-              <input 
-                type="email" 
-                placeholder="you@example.com"
-                className={`w-full border rounded-md px-3 py-2 text-[13px] focus:outline-none transition-colors ${
-                  isDarkMode 
-                  ? 'bg-black border-[#222] text-white focus:border-[#444] placeholder:text-[#444]' 
-                  : 'bg-neutral-50 border-neutral-200 text-black focus:border-neutral-400 placeholder:text-neutral-400'
-                }`}
-              />
-            </div>
-
-            <div>
-              <label className={`block text-[13px] font-medium mb-2 ${
-                isDarkMode ? 'text-white' : 'text-black'
-              }`}>
-                Message
-              </label>
-              <textarea 
-                rows={6}
-                placeholder="How can I help?"
-                className={`w-full border rounded-md px-3 py-2 text-[13px] focus:outline-none transition-colors resize-none ${
-                  isDarkMode 
-                  ? 'bg-black border-[#222] text-white focus:border-[#444] placeholder:text-[#444]' 
-                  : 'bg-neutral-50 border-neutral-200 text-black focus:border-neutral-400 placeholder:text-neutral-400'
-                }`}
-              />
-            </div>
-
-            <button className={`w-full py-2 border text-[13px] font-medium rounded-md transition-all ${
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          {/* Main Action Card */}
+          <div 
+            onClick={handleSendMail}
+            className={`lg:col-span-2 group cursor-pointer p-8 rounded-2xl border transition-all duration-300 ${
               isDarkMode 
-              ? 'border-[#222] text-white hover:bg-[#111]' 
-              : 'border-neutral-200 text-black hover:bg-neutral-50'
-            }`}>
-              Send
-            </button>
-          </section>
-
-          {/* Right Column: Links & Notes */}
-          <section>
-            <h2 className={`text-[16px] font-semibold mb-4 ${
-              isDarkMode ? 'text-white' : 'text-black'
-            }`}>
-              Links
-            </h2>
-            <div className="flex flex-wrap gap-2 mb-10">
-              {links.map((link) => (
-                <button 
-                  key={link}
-                  className={`px-6 py-2 border rounded-md text-[13px] transition-all ${
-                    isDarkMode 
-                    ? 'border-[#222] text-white hover:bg-[#111]' 
-                    : 'border-neutral-200 text-black hover:bg-neutral-50 shadow-sm'
-                  }`}
-                >
-                  {link}
-                </button>
-              ))}
+                ? 'bg-[#0a0a0a] border-[#1a1a1a] hover:border-blue-500/50' 
+                : 'bg-white border-neutral-200 hover:border-blue-500/50 shadow-sm'
+            }`}
+          >
+            <div className="flex justify-between items-start mb-12">
+              <div className={`p-3 rounded-lg ${isDarkMode ? 'bg-[#111]' : 'bg-neutral-100'}`}>
+                <Mail className={isDarkMode ? 'text-white' : 'text-black'} size={24} />
+              </div>
+              <ArrowUpRight className="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500" size={24} />
             </div>
+            
+            <h3 className={`text-xl font-semibold mb-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+              Send me an email
+            </h3>
+            <p className="text-sm mb-6">Direct communication for inquiries or collaborations.</p>
+            <span className="text-sm font-mono text-blue-500">muhammedshan930o@gmail.com</span>
+          </div>
 
-            <h2 className={`text-[14px] font-semibold mb-2 ${
-              isDarkMode ? 'text-white' : 'text-black'
-            }`}>
-              Notes
-            </h2>
-            <p className="text-[13px] leading-relaxed">
-              The form submits to an in-app endpoint and stays strictly black & white.
+          {/* Social Links Column */}
+          <div className="space-y-4">
+            {socialLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`flex items-center justify-between p-4 rounded-xl border transition-all duration-300 ${
+                  isDarkMode 
+                    ? 'bg-[#0a0a0a] border-[#1a1a1a] hover:bg-[#111] text-white' 
+                    : 'bg-white border-neutral-200 hover:bg-neutral-50 text-black shadow-sm'
+                }`}
+              >
+                <div className="flex items-center gap-3 text-sm font-medium">
+                  {link.icon}
+                  {link.name}
+                </div>
+                <ArrowUpRight size={14} className="opacity-40" />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Subtle Footer Note */}
+        <div className="mt-16 pt-8 border-t border-transparent flex justify-center">
+            <p className="text-[12px] uppercase tracking-widest opacity-50">
+              Based in Kerala, India • Available Worldwide
             </p>
-          </section>
         </div>
       </main>
 
-      {/* 3. Footer */}
       <Footer />
     </div>
   );

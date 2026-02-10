@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Sun, Moon } from 'lucide-react';
+import { Sun, Moon, Menu, X } from 'lucide-react'; // Added Menu/X for mobile
 import { useTheme } from '../ThemeContext';
 
 const Header = () => {
-    // Access the global theme state and toggle function
     const { isDarkMode, toggleTheme } = useTheme();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    // Helper function to handle NavLink styles
     const getNavLinkClass = (isActive) => {
-        const base = "cursor-pointer transition-colors";
+        const base = "cursor-pointer transition-colors whitespace-nowrap";
         if (isActive) {
             return `${base} ${isDarkMode ? 'text-white' : 'text-black'}`;
         }
@@ -19,10 +18,10 @@ const Header = () => {
     return (
         <nav className="flex items-center justify-between px-6 py-4 max-w-5xl mx-auto w-full bg-transparent">
             {/* Logo */}
-            <div className={`font-semibold text-[15px] transition-colors ${
-                isDarkMode ? 'text-white' : 'text-black'
-            }`}>
-                Muhammed shan
+            <div className={`font-semibold text-[15px] transition-colors ${isDarkMode ? 'text-white' : 'text-black'
+                }`}>
+                <span className="hidden sm:inline">Muhammed </span>
+                <span>shan</span>
             </div>
 
             <div className="flex items-center gap-6">
@@ -50,14 +49,12 @@ const Header = () => {
                 </ul>
 
                 {/* Theme Toggle Button */}
-                <button 
+                <button
                     onClick={toggleTheme}
-                    aria-label="Toggle Theme"
-                    className={`p-1.5 border rounded-md transition-all ${
-                        isDarkMode 
-                        ? 'border-[#222] hover:bg-[#111] text-white' 
-                        : 'border-neutral-200 hover:bg-neutral-50 text-black'
-                    }`}
+                    className={`p-1.5 border rounded-md transition-all ${isDarkMode
+                            ? 'border-[#222] hover:bg-[#111] text-white'
+                            : 'border-neutral-200 hover:bg-neutral-50 text-black'
+                        }`}
                 >
                     {isDarkMode ? <Sun size={14} /> : <Moon size={14} />}
                 </button>
