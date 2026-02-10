@@ -8,8 +8,8 @@ const ContactPage = () => {
   const { isDarkMode } = useTheme();
 
   const socialLinks = [
-    { name: 'LinkedIn', icon: <Linkedin size={16} />, url: '#' },
-    { name: 'GitHub', icon: <Github size={16} />, url: '#' },
+    { name: 'LinkedIn', icon: <Linkedin size={16} />, url: 'www.linkedin.com/in/muhammedshan-' },
+    { name: 'GitHub', icon: <Github size={16} />, url: 'https://github.com/muhammedshann' },
     { name: 'Resume', icon: <FileText size={16} />, url: '#' },
   ];
 
