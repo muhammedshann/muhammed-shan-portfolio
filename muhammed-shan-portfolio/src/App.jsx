@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import AboutPage from '../Pages/About';
+import ContactPage from '../Pages/Contact';
 import HomePage from '../Pages/Home';
+import ProjectsPage from '../Pages/Projects';
 import './App.css';
 
 const SnappyIntro = () => (
