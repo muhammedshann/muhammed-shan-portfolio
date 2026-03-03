@@ -10,61 +10,55 @@ const ProjectsPage = () => {
   const projects = [
     {
       title: "EduFlow",
-      description: "Educational productivity platform. Built modular features including smart notes, AI chatbot, Pomodoro timer, habit tracker, and community groups.",
-      tags: ["Python", "Django", "Postgres", "React", "Razorpay"],
-      link: "https://github.com/muhammedshann/EduFlow.git"
+      description: "A comprehensive educational productivity ecosystem. Engineered modular features including smart note-taking, integrated AI assistance, and real-time community engagement tools.",
+      tags: ["Python", "Django", "PostgreSQL", "React", "Razorpay"],
+      github: "https://github.com/muhammedshann/EduFlow.git",
+      liveUrl: "https://fresheasy.online/"
     },
     {
       title: "Fresh Easy",
-      description: "E-commerce Platform featuring product catalog, cart, wishlist, Razorpay payments, and a complete order lifecycle management system.",
+      description: "Architected a full-scale E-commerce platform managing the complete order lifecycle—from secure Razorpay payment integration to dynamic inventory management.",
       tags: ["Python", "Django", "PostgreSQL", "Razorpay", "Tailwind"],
-      link: "https://github.com/muhammedshann/fresheasy.git"
+      github: "https://github.com/muhammedshann/fresheasy.git",
+      liveUrl: ""
     },
     {
       title: "Echo Note",
-      description: "Full-stack AI powered speech-to-text application supporting real-time and file-based audio transcription using OpenAI Whisper.",
-      tags: ["Python", "Django", "React", "OpenAPI", "Postgres"],
-      link: "https://github.com/muhammedshann/echo-note"
+      description: "A specialized AI-driven transcription service. Implemented OpenAI Whisper for high-precision, real-time speech-to-text conversion with a focus on low-latency processing.",
+      tags: ["Python", "Django", "React", "OpenAI", "PostgreSQL"],
+      github: "https://github.com/muhammedshann/echo-note",
+      liveUrl: ""
     }
   ];
 
   return (
-    <div className={`flex flex-col min-h-screen transition-colors duration-500 ${
-      isDarkMode 
-        ? 'bg-[#050505] text-[#a1a1a1] selection:bg-white selection:text-black' 
+    <div className={`flex flex-col min-h-screen transition-colors duration-500 ${isDarkMode
+        ? 'bg-[#050505] text-[#a1a1a1] selection:bg-white selection:text-black'
         : 'bg-[#fafafa] text-neutral-600 selection:bg-black selection:text-white'
-    } font-sans antialiased`}>
+      } font-sans antialiased`}>
 
       <Header />
 
-      <main className="flex-grow max-w-5xl mx-auto px-6 mt-16 md:mt-24 w-full mb-20">
-        <h1 className={`text-[28px] md:text-[32px] font-bold mb-10 transition-colors ${
-          isDarkMode ? 'text-white' : 'text-black'
-        }`}>
+      <main className="flex-grow max-w-6xl mx-auto px-6 mt-16 md:mt-24 w-full mb-20">
+        <h1 className={`text-[28px] md:text-[32px] font-bold mb-10 transition-colors ${isDarkMode ? 'text-white' : 'text-black'
+          }`}>
           Projects<span className="text-blue-500">.</span>
         </h1>
 
-        {/* Project Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`group border rounded-2xl p-6 flex flex-col h-full transition-all duration-300 ${
-                isDarkMode
-                  ? 'border-[#1a1a1a] bg-[#0a0a0a] hover:border-blue-500/30'
-                  : 'border-neutral-200 bg-white hover:border-blue-500/30 shadow-sm shadow-neutral-200/50'
-              }`}
+              className={`group relative border rounded-2xl p-7 flex flex-col h-full transition-all duration-500 ${isDarkMode
+                  ? 'border-[#1a1a1a] bg-[#0a0a0a] hover:border-blue-500/20'
+                  : 'border-neutral-200 bg-white hover:border-blue-500/20 shadow-sm'
+                }`}
             >
-              <div className="flex justify-between items-start mb-4">
-                <h3 className={`text-[16px] font-semibold transition-colors ${
-                  isDarkMode ? 'text-white' : 'text-black'
-                }`}>
-                  {project.title}
-                </h3>
-                <Github size={16} className="opacity-40 group-hover:opacity-100 transition-opacity" />
-              </div>
+              <h3 className={`text-[17px] font-bold mb-3 transition-colors ${isDarkMode ? 'text-white' : 'text-black'}`}>
+                {project.title}
+              </h3>
 
-              <p className="text-[13px] md:text-[14px] leading-relaxed mb-6 flex-grow opacity-90">
+              <p className="text-[14px] leading-relaxed mb-6 flex-grow opacity-80">
                 {project.description}
               </p>
 
@@ -73,31 +67,51 @@ const ProjectsPage = () => {
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className={`text-[11px] font-medium px-2.5 py-0.5 border rounded-lg transition-colors ${
-                      isDarkMode
-                        ? 'border-[#1a1a1a] bg-[#111] text-[#888888]'
-                        : 'border-neutral-100 bg-neutral-50 text-neutral-500'
-                    }`}
+                    className={`text-[10px] uppercase tracking-wider font-semibold px-2 py-1 rounded-md ${isDarkMode
+                        ? 'bg-[#111] text-[#666] border border-[#1a1a1a]'
+                        : 'bg-neutral-100 text-neutral-500 border border-neutral-200'
+                      }`}
                   >
                     {tag}
                   </span>
                 ))}
               </div>
 
-              {/* Action Link */}
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`inline-flex items-center gap-2 w-fit text-[12px] font-semibold transition-all ${
-                  isDarkMode
-                    ? 'text-white hover:text-blue-400'
-                    : 'text-black hover:text-blue-600'
-                }`}
-              >
-                View Project
-                <ExternalLink size={14} />
-              </a>
+              {/* Action Buttons */}
+              <div className="flex items-center gap-4 mt-auto pt-4 border-t border-transparent group-hover:border-inherit transition-colors">
+                {/* GitHub Button */}
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`p-2 rounded-full transition-all duration-300 ${isDarkMode 
+                    ? 'hover:bg-white hover:text-black text-[#888]' 
+                    : 'hover:bg-black hover:text-white text-neutral-400'}`}
+                  title="View Source Code"
+                >
+                  <Github size={18} />
+                </a>
+
+                {/* Live Link Button (Only shows if liveUrl exists) */}
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`inline-flex items-center gap-2 text-[12px] font-bold px-4 py-2 rounded-lg transition-all ${isDarkMode
+                        ? 'bg-[#1a1a1a] text-white hover:bg-blue-600'
+                        : 'bg-neutral-100 text-black hover:bg-blue-600 hover:text-white'
+                      }`}
+                  >
+                    Visit
+                    <ExternalLink size={14} />
+                  </a>
+                )}
+
+                {/* {!project.liveUrl && (
+                  <span className="text-[11px] font-medium opacity-40 italic">Deployment pending</span>
+                )} */}
+              </div>
             </div>
           ))}
         </div>
