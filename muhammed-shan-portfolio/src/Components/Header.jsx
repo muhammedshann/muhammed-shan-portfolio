@@ -1,14 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Sun, Moon, Menu, X } from 'lucide-react'; // Added Menu/X for mobile
+import { Sun, Moon } from 'lucide-react';
 import { useTheme } from '../ThemeContext';
 
 const Header = () => {
     const { isDarkMode, toggleTheme } = useTheme();
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const getNavLinkClass = (isActive) => {
-        const base = "cursor-pointer transition-colors whitespace-nowrap";
+        const base = "cursor-pointer transition-colors whitespace-nowrap py-1";
         if (isActive) {
             return `${base} ${isDarkMode ? 'text-white' : 'text-black'}`;
         }
@@ -16,16 +15,16 @@ const Header = () => {
     };
 
     return (
-        <nav className="flex items-center justify-between px-6 py-4 max-w-5xl mx-auto w-full bg-transparent">
+        <nav className="flex items-center justify-between px-6 py-6 max-w-5xl mx-auto w-full bg-transparent gap-4">
             {/* Logo */}
-            <div className={`font-semibold text-[15px] transition-colors ${isDarkMode ? 'text-white' : 'text-black'
-                }`}>
-                <span className="hidden sm:inline">Muhammed </span>
+            <div className={`font-semibold text-[15px] transition-colors flex-shrink-0 ${isDarkMode ? 'text-white' : 'text-black'}`}>
+                <span className="hidden xs:inline">Muhammed </span>
                 <span>shan</span>
             </div>
 
-            <div className="flex items-center gap-6">
-                <ul className="flex gap-5 text-[13px] font-medium">
+            {/* Navigation Links - Scrollable on very small screens */}
+            <div className="flex items-center gap-4 sm:gap-10 overflow-hidden">
+                <ul className="flex items-center gap-5 sm:gap-10 text-[13px] font-medium overflow-x-auto no-scrollbar py-1">
                     <li>
                         <NavLink to="/" className={({ isActive }) => getNavLinkClass(isActive)}>
                             Home
@@ -42,6 +41,11 @@ const Header = () => {
                         </NavLink>
                     </li>
                     <li>
+                        <NavLink to="/blog" className={({ isActive }) => getNavLinkClass(isActive)}>
+                            Blog
+                        </NavLink>
+                    </li>
+                    <li>
                         <NavLink to="/contact" className={({ isActive }) => getNavLinkClass(isActive)}>
                             Contact
                         </NavLink>
@@ -51,12 +55,12 @@ const Header = () => {
                 {/* Theme Toggle Button */}
                 <button
                     onClick={toggleTheme}
-                    className={`p-1.5 border rounded-md transition-all ${isDarkMode
-                            ? 'border-[#222] hover:bg-[#111] text-white'
-                            : 'border-neutral-200 hover:bg-neutral-50 text-black'
+                    className={`p-2 border rounded-xl transition-all flex-shrink-0 ${isDarkMode
+                        ? 'border-[#1a1a1a] bg-[#0a0a0a] hover:bg-[#111] text-white'
+                        : 'border-neutral-200 bg-white hover:bg-neutral-50 text-black shadow-sm'
                         }`}
                 >
-                    {isDarkMode ? <Sun size={14} /> : <Moon size={14} />}
+                    {isDarkMode ? <Sun size={15} /> : <Moon size={15} />}
                 </button>
             </div>
         </nav>

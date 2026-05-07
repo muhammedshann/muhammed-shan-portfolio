@@ -5,20 +5,21 @@ import AboutPage from '../Pages/About';
 import ContactPage from '../Pages/Contact';
 import HomePage from '../Pages/Home';
 import ProjectsPage from '../Pages/Projects';
+import BlogPage from '../Pages/Blog';
 import './App.css';
 
 const SnappyIntro = () => (
-  <motion.div 
+  <motion.div
     className="intro-container"
-    exit={{ 
-      opacity: 0, 
-      filter: "blur(15px)", 
-      scale: 0.98 
+    exit={{
+      opacity: 0,
+      filter: "blur(15px)",
+      scale: 0.98
     }}
     transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
   >
     <div className="text-wrapper">
-      <motion.h1 
+      <motion.h1
         className="intro-name"
         initial={{ y: 15, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -26,7 +27,7 @@ const SnappyIntro = () => (
       >
         SHAN<span className="blue-dot">.</span>
       </motion.h1>
-      <motion.div 
+      <motion.div
         className="reveal-line"
         initial={{ scaleX: 0 }}
         animate={{ scaleX: 1 }}
@@ -51,7 +52,7 @@ export default function App() {
         {!showSite ? (
           <SnappyIntro key="intro" />
         ) : (
-          <motion.div 
+          <motion.div
             key="site"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -61,9 +62,10 @@ export default function App() {
             <BrowserRouter>
               <Routes>
                 <Route path='/' element={<HomePage />} />
-              <Route path='/about/' element={<AboutPage />} />
-              <Route path='/projects/' element={<ProjectsPage />} />
-              <Route path='/contact/' element={<ContactPage />} />
+                <Route path='/about/' element={<AboutPage />} />
+                <Route path='/projects/' element={<ProjectsPage />} />
+                <Route path='/contact/' element={<ContactPage />} />
+                <Route path='/blog/' element={<BlogPage />} />
               </Routes>
             </BrowserRouter>
           </motion.div>
