@@ -15,7 +15,7 @@ const Header = () => {
     };
 
     return (
-        <nav className="flex items-center justify-between px-6 py-6 max-w-5xl mx-auto w-full bg-transparent gap-4">
+        <nav className="sticky top-0 z-50 flex items-center justify-between px-6 py-6 max-w-5xl mx-auto w-full bg-transparent backdrop-blur-sm gap-4">
             {/* Logo */}
             <div className={`font-semibold text-[15px] transition-colors flex-shrink-0 ${isDarkMode ? 'text-white' : 'text-black'}`}>
                 <span className="hidden xs:inline">Muhammed </span>
@@ -23,8 +23,8 @@ const Header = () => {
             </div>
 
             {/* Navigation Links - Scrollable on very small screens */}
-            <div className="flex items-center gap-4 sm:gap-10 overflow-hidden">
-                <ul className="flex items-center gap-5 sm:gap-10 text-[13px] font-medium overflow-x-auto no-scrollbar py-1">
+            <div className="flex items-center gap-4 sm:gap-10">
+                <ul className="flex items-center gap-5 sm:gap-10 text-[13px] font-medium py-1">
                     <li>
                         <NavLink to="/" className={({ isActive }) => getNavLinkClass(isActive)}>
                             Home
