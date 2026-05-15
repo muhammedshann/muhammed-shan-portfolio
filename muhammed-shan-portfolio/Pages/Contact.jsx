@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Header from '../src/Components/Header';
 import Footer from '../src/Components/Footer';
-import ResumePDF from '../public/resume.pdf';
+import ResumePDF from '../src/assets/resume.pdf';
 import { useTheme } from '../src/ThemeContext';
 import { Mail, Linkedin, Github, FileText, ArrowUpRight, X, Eye } from 'lucide-react';
 
