@@ -3,7 +3,7 @@ import Header from '../src/Components/Header';
 import Footer from '../src/Components/Footer';
 import ResumePDF from '../src/assets/resume.pdf';
 import { useTheme } from '../src/ThemeContext';
-import { Mail, Linkedin, Github, FileText, ArrowUpRight, X, Eye } from 'lucide-react';
+import { Mail, Linkedin, Github, FileText, ArrowUpRight, X, Eye, ExternalLink } from 'lucide-react';
 
 const ContactPage = () => {
   const { isDarkMode } = useTheme();
@@ -77,27 +77,51 @@ const ContactPage = () => {
           </div>
         </div>
 
-        {/* Inline Resume Viewer */}
+        {/* Resume Viewer */}
         {showResume && (
           <div className="mt-12 animate-in fade-in slide-in-from-top-4 duration-500">
             <div className="flex justify-between items-center mb-4">
-              <h3 className={`text-sm font-semibold ${isDarkMode ? 'text-white' : 'text-black'}`}>Preview: Resume.pdf</h3>
+              <h3 className={`text-sm font-semibold ${isDarkMode ? 'text-white' : 'text-black'}`}>Resume Document</h3>
               <button onClick={() => setShowResume(false)} className="p-1 hover:text-red-500 transition-colors"><X size={18} /></button>
             </div>
 
             <div className={`w-full rounded-2xl border overflow-hidden ${isDarkMode ? 'border-[#1a1a1a]' : 'border-neutral-200 shadow-lg'}`}>
-              {/* Responsive PDF Viewer */}
-              <div className="w-full h-[500px] md:h-[800px]">
+
+              {/* Desktop View: Iframe Works Perfectly */}
+              <div className="hidden md:block w-full h-[800px]">
                 <iframe
                   src={resumeUrl}
                   title="Resume PDF"
                   className="w-full h-full border-none"
                 />
               </div>
+
+              {/* Mobile View: Dedicated Open Card to fix the 1-page zoom issue */}
+              <div className={`md:hidden flex flex-col items-center justify-center p-10 text-center ${isDarkMode ? 'bg-[#0a0a0a]' : 'bg-neutral-50'}`}>
+                <div className={`p-4 rounded-full mb-4 ${isDarkMode ? 'bg-[#111]' : 'bg-white shadow-sm'}`}>
+                  <FileText size={32} className="text-blue-500" />
+                </div>
+                <h4 className={`text-lg font-semibold mb-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>Muhammed Shan - Resume</h4>
+                <p className="text-[13px] mb-8 opacity-70 max-w-[250px]">
+                  Mobile browsers cannot display multi-page PDFs cleanly. Please open it in your native viewer.
+                </p>
+                <a
+                  href={resumeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-medium transition-all ${isDarkMode
+                      ? 'bg-white text-black hover:bg-neutral-200'
+                      : 'bg-black text-white hover:bg-neutral-800'
+                    }`}
+                >
+                  Open Full PDF <ExternalLink size={16} />
+                </a>
+              </div>
+
             </div>
 
-            {/* Download/Open Link (Visible on all devices for fallback) */}
-            <div className="flex mt-4 justify-center">
+            {/* Desktop Download Fallback */}
+            <div className="hidden md:flex mt-4 justify-center">
               <a
                 href={resumeUrl}
                 target="_blank"
