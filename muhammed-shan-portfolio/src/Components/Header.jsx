@@ -41,11 +41,6 @@ const Header = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/blog" className={({ isActive }) => getNavLinkClass(isActive)}>
-                            Blog
-                        </NavLink>
-                    </li>
-                    <li>
                         <NavLink to="/contact" className={({ isActive }) => getNavLinkClass(isActive)}>
                             Contact
                         </NavLink>

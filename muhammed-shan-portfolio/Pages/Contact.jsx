@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import Header from '../src/Components/Header';
 import Footer from '../src/Components/Footer';
+import ResumePDF from '../public/resume.pdf';
 import { useTheme } from '../src/ThemeContext';
 import { Mail, Linkedin, Github, FileText, ArrowUpRight, X, Eye } from 'lucide-react';
 
 const ContactPage = () => {
   const { isDarkMode } = useTheme();
   const [showResume, setShowResume] = useState(false);
+  const resumeUrl = `${ResumePDF}?t=${Date.now()}`;
+
 
   const socialLinks = [
     { name: 'LinkedIn', icon: <Linkedin size={16} />, url: 'https://www.linkedin.com/in/muhammedshan-' },
@@ -79,26 +82,28 @@ const ContactPage = () => {
         {showResume && (
           <div className="mt-12 animate-in fade-in slide-in-from-top-4 duration-500">
             <div className="flex justify-between items-center mb-4">
-              <h3 className={`text-sm font-semibold ${isDarkMode ? 'text-white' : 'text-black'}`}>Preview: Muhammed_Shan_Resume.pdf</h3>
+              <h3 className={`text-sm font-semibold ${isDarkMode ? 'text-white' : 'text-black'}`}>Preview: Resume.pdf</h3>
               <button onClick={() => setShowResume(false)} className="p-1 hover:text-red-500"><X size={18} /></button>
             </div>
             <div className={`w-full h-[500px] md:h-[800px] rounded-2xl border overflow-hidden ${isDarkMode ? 'border-[#1a1a1a]' : 'border-neutral-200 shadow-lg'}`}>
-              <iframe
-                src="/Resume.pdf#view=FitH"
+              <embed
+                src={resumeUrl}
+                type="application/pdf"
                 width="100%"
                 height="100%"
-                className={`${isDarkMode ? 'invert-[0.05] grayscale-[0.1]' : ''} border-none`}
-                title="Resume Viewer"
+                className="border-none"
               />
             </div>
 
-            <div className="mt-4 flex justify-center md:hidden">
+            <div className="mt-4 flex justify-center">
               <a
-                href="/Resume.pdf"
-                download
-                className="text-[12px] font-medium text-blue-500 underline"
+                href={resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[12px] font-medium text-blue-500 hover:underline flex items-center gap-1"
               >
-                Can't see the preview? Download PDF
+                Can't see the preview? Open in new tab or Download PDF
+                <ArrowUpRight size={12} />
               </a>
             </div>
           </div>
