@@ -1,14 +1,14 @@
 import React from 'react';
-import { useTheme } from '../ThemeContext'; // Import your custom hook
+import { useTheme } from '../useTheme'; // Import your custom hook
 
 export default function Footer() {
   const { isDarkMode } = useTheme(); // Access global theme state
 
   return (
-    <footer className={`mt-auto border-t w-full transition-colors duration-300 ${
+    <footer className={`mt-auto border-t w-full transition-colors duration-300 backdrop-blur-md ${
       isDarkMode 
-      ? 'bg-black border-[#1a1a1a]' 
-      : 'bg-white border-neutral-200'
+      ? 'bg-black/60 border-[#1a1a1a]' 
+      : 'bg-white/60 border-neutral-200'
     }`}>
       <div className="mx-auto max-w-5xl px-6 py-10">
         <div className="flex flex-col items-center justify-center">

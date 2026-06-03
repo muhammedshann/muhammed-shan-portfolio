@@ -2,25 +2,25 @@ import React, { useState } from 'react';
 import Header from '../src/Components/Header';
 import Footer from '../src/Components/Footer';
 import ResumePDF from '../src/assets/resume.pdf';
-import { useTheme } from '../src/ThemeContext';
+import { useTheme } from '../src/useTheme';
 import { Mail, Linkedin, Github, FileText, ArrowUpRight, X, Eye, ExternalLink } from 'lucide-react';
+
+const socialLinks = [
+  { name: 'LinkedIn', icon: <Linkedin size={16} />, url: 'https://www.linkedin.com/in/muhammedshan-' },
+  { name: 'GitHub', icon: <Github size={16} />, url: 'https://github.com/muhammedshann' },
+];
 
 const ContactPage = () => {
   const { isDarkMode } = useTheme();
   const [showResume, setShowResume] = useState(false);
-  const resumeUrl = `${ResumePDF}?t=${Date.now()}`;
-
-  const socialLinks = [
-    { name: 'LinkedIn', icon: <Linkedin size={16} />, url: 'https://www.linkedin.com/in/muhammedshan-' },
-    { name: 'GitHub', icon: <Github size={16} />, url: 'https://github.com/muhammedshann' },
-  ];
+  const resumeUrl = ResumePDF;
 
   const handleSendMail = () => {
     window.location.href = "mailto:muhammedshan930o@gmail.com";
   };
 
   return (
-    <div className={`flex flex-col min-h-screen transition-colors duration-500 ${isDarkMode ? 'bg-[#050505] text-[#a1a1a1]' : 'bg-[#fafafa] text-neutral-600'
+    <div className={`flex flex-col min-h-screen transition-colors duration-500 ${isDarkMode ? 'text-[#a1a1a1]' : 'text-neutral-600'
       } font-sans antialiased`}
     >
       <Header />

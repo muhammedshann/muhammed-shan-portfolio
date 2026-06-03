@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../src/Components/Header';
 import Footer from '../src/Components/Footer';
-import { useTheme } from '../src/ThemeContext';
+import { useTheme } from '../src/useTheme';
 import { ExternalLink, Github } from 'lucide-react';
 
 const ProjectsPage = () => {
@@ -47,8 +47,8 @@ const ProjectsPage = () => {
 
   return (
     <div className={`flex flex-col min-h-screen transition-colors duration-500 ${isDarkMode
-      ? 'bg-[#050505] text-[#a1a1a1] selection:bg-white selection:text-black'
-      : 'bg-[#fafafa] text-neutral-600 selection:bg-black selection:text-white'
+      ? 'text-[#a1a1a1] selection:bg-white selection:text-black'
+      : 'text-neutral-600 selection:bg-black selection:text-white'
       } font-sans antialiased`}>
 
       <Header />

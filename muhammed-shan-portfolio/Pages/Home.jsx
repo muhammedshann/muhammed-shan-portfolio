@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../src/Components/Header';
 import Image from '../src/assets/MuhammedShan.jpg';
 import Footer from '../src/Components/Footer';
-import { useTheme } from '../src/ThemeContext';
+import { useTheme } from '../src/useTheme';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Mail } from 'lucide-react';
 
@@ -12,8 +12,8 @@ const HomePage = () => {
 
   return (
     <div className={`flex flex-col min-h-screen transition-colors duration-500 ${isDarkMode
-      ? 'bg-[#050505] text-[#a1a1a1] selection:bg-white selection:text-black'
-      : 'bg-[#fafafa] text-neutral-600 selection:bg-black selection:text-white'
+      ? 'text-[#a1a1a1] selection:bg-white selection:text-black'
+      : 'text-neutral-600 selection:bg-black selection:text-white'
       } font-sans antialiased`}>
 
       <Header />
@@ -33,7 +33,7 @@ const HomePage = () => {
           </div>
 
           <div className="space-y-2">
-            <h1 className={`text-[40px] md:text-[56px] font-bold leading-[1.1] tracking-tight transition-colors ${isDarkMode ? 'text-white' : 'text-black'
+            <h1 className={`text-[40px] md:text-[56px] font-bold leading-[1.1] tracking-tight whitespace-nowrap transition-colors ${isDarkMode ? 'text-white' : 'text-black'
               }`}>
               Muhammed <span className="text-blue-500">shan.</span>
             </h1>

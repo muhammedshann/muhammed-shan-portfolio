@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Header from '../src/Components/Header';
 import Footer from '../src/Components/Footer';
-import { useTheme } from '../src/ThemeContext';
+import { useTheme } from '../src/useTheme';
 import { Search, ArrowRight, MessageSquare, X } from 'lucide-react';
 
 const BlogPage = () => {

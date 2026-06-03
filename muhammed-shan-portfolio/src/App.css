@@ -22,6 +22,8 @@
   align-items: center;
   background: var(--bg);
   z-index: 1000;
+  contain: layout paint;
+  will-change: opacity, transform, filter;
 }
 
 .text-wrapper {
@@ -37,6 +39,7 @@
   letter-spacing: -1px;
   margin: 0;
   color: white;
+  will-change: transform, opacity;
 }
 
 .blue-dot {
@@ -49,6 +52,7 @@
   width: 40px; /* Short, elegant line */
   margin-top: 8px;
   opacity: 0.6;
+  will-change: transform;
 }
 
 /* Main Content Area */

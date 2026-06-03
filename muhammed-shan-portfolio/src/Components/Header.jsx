@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Sun, Moon } from 'lucide-react';
-import { useTheme } from '../ThemeContext';
+import { useTheme } from '../useTheme';
 
 const Header = () => {
     const { isDarkMode, toggleTheme } = useTheme();
