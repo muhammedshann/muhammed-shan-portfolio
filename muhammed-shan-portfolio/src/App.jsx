@@ -1,7 +1,7 @@
 import React, { lazy, Suspense, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ShaderBackground from './components/ui/ShaderBackground';
+import ShaderBackground from './Components/ui/ShaderBackground';
 import { useTheme } from './useTheme';
 import './App.css';
 
