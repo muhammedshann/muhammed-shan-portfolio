@@ -7,9 +7,6 @@ import './App.css';
 // Eagerly prefetch the HomePage chunk so it's ready when the shutter opens
 const homeChunkPromise = import('../Pages/Home');
 const HomePage = lazy(() => homeChunkPromise);
-const AboutPage = lazy(() => import('../Pages/About'));
-const ProjectsPage = lazy(() => import('../Pages/Projects'));
-const ContactPage = lazy(() => import('../Pages/Contact'));
 
 /* ------------------------------------------------------------------------------------------------
    IntroReel — fast-cut intro ("I CODE FOR MY FREEDOM") + movie shutter transition.
@@ -209,9 +206,17 @@ export default function App() {
             <Suspense fallback={<PageFallback />}>
               <Routes>
                 <Route path='/' element={<HomePage />} />
-                <Route path='/about/' element={<AboutPage />} />
-                <Route path='/projects/' element={<ProjectsPage />} />
-                <Route path='/contact/' element={<ContactPage />} />
+                <Route path='/why-me' element={<HomePage initialSection="why-me" />} />
+                <Route path='/why-me/' element={<HomePage initialSection="why-me" />} />
+                <Route path='/skills' element={<HomePage initialSection="why-me" />} />
+                <Route path='/skills/' element={<HomePage initialSection="why-me" />} />
+                <Route path='/about' element={<HomePage initialSection="about" />} />
+                <Route path='/about/' element={<HomePage initialSection="about" />} />
+                <Route path='/projects' element={<HomePage initialSection="projects" />} />
+                <Route path='/projects/' element={<HomePage initialSection="projects" />} />
+                <Route path='/contact' element={<HomePage initialSection="contact" />} />
+                <Route path='/contact/' element={<HomePage initialSection="contact" />} />
+                <Route path='*' element={<HomePage />} />
               </Routes>
             </Suspense>
           </BrowserRouter>
