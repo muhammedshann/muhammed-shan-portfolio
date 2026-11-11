@@ -62,28 +62,28 @@ const FadeUp = ({ children, delay = 0, className = '', immediate = false }) => {
 /* ─── Technology Marquee Data ────────────────────────────────── */
 const techRows = [
   [
-    { name: 'React', icon: Code2, color: '#61dafb' },
-    { name: 'JavaScript', icon: Braces, color: '#f7df1e' },
-    { name: 'Django', icon: Server, color: '#44b78b' },
-    { name: 'Python', icon: TerminalSquare, color: '#3776ab' },
-    { name: 'REST APIs', icon: Workflow, color: '#ff6b6b' },
-    { name: 'PostgreSQL', icon: Database, color: '#4169e1' },
-  ],
-  [
-    { name: 'MongoDB', icon: Database, color: '#47a248' },
-    { name: 'AWS', icon: Cloud, color: '#ff9900' },
-    { name: 'System Design', icon: Boxes, color: '#a78bfa' },
-    { name: 'Git', icon: GitBranch, color: '#f05032' },
+    { name: 'React 19', icon: Code2, color: '#61dafb' },
+    { name: 'React Native', icon: Smartphone, color: '#38bdf8' },
     { name: 'Next.js', icon: Globe2, color: '#ffffff' },
-    { name: 'Backend', icon: Cpu, color: '#c084fc' },
+    { name: 'Node.js', icon: Server, color: '#68a063' },
+    { name: 'Python / Django', icon: TerminalSquare, color: '#3776ab' },
+    { name: 'REST & GraphQL', icon: Workflow, color: '#ff6b6b' },
   ],
   [
+    { name: 'AI Workflows', icon: Bot, color: '#C6FD50' },
+    { name: 'Expo (iOS/Android)', icon: Smartphone, color: '#a78bfa' },
+    { name: 'TypeScript', icon: Braces, color: '#3178c6' },
+    { name: 'PostgreSQL', icon: Database, color: '#4169e1' },
+    { name: 'Supabase', icon: Database, color: '#3ecf8e' },
+    { name: 'AWS & Cloud', icon: Cloud, color: '#ff9900' },
+  ],
+  [
+    { name: 'OpenAI & Gemini', icon: Bot, color: '#10a37f' },
     { name: 'Tailwind CSS', icon: Layers3, color: '#38bdf8' },
     { name: 'Framer Motion', icon: Workflow, color: '#f472b6' },
-    { name: 'Django REST', icon: Globe2, color: '#10b981' },
-    { name: 'Supabase', icon: Database, color: '#3ecf8e' },
-    { name: 'Deployment', icon: Cloud, color: '#60a5fa' },
-    { name: 'Clean Code', icon: Code2, color: '#C6FD50' },
+    { name: 'Docker', icon: Boxes, color: '#2496ed' },
+    { name: 'Git & CI/CD', icon: GitBranch, color: '#f05032' },
+    { name: 'Rapid Shipping', icon: Zap, color: '#C6FD50' },
   ],
 ];
 
@@ -213,28 +213,28 @@ const projectsData = [
 /* ─── FAQs Data ──────────────────────────────────────────────── */
 const faqsData = [
   {
-    q: "What is your core tech stack and specialization?",
-    a: "My primary specialization is full stack web engineering with Python & Django on the backend (including Django REST Framework, PostgreSQL, and background task queues) and modern React / Next.js / TypeScript on the frontend with Tailwind CSS."
+    q: "What platforms and tech stacks do you build with?",
+    a: "I build complete web applications and cross-platform mobile apps (iOS & Android) across modern stacks. For backends, I work with Python & Django, Node.js, Express, and REST/GraphQL APIs with PostgreSQL and Supabase. For frontend and mobile, I build with React 19, Next.js, TypeScript, and React Native / Expo. Crucially, I leverage modern AI tools and agents to build and ship at unprecedented velocity."
   },
   {
-    q: "Are you available for contract or full-time opportunities?",
-    a: "Yes! I am actively available for both full-time software engineering roles and high-impact contract or freelance projects. I work remotely with clients and teams worldwide."
+    q: "How do you use AI tools to accelerate development?",
+    a: "I am deeply proficient with modern AI developer tools, autonomous coding agents, and LLMs (Claude, OpenAI, Gemini). I use them to accelerate everything from database schema modeling and automated test suites to rapid UI scaffolding and complex debugging. This allows me to deliver the velocity and execution of an entire agency team as a single, agile engineer."
+  },
+  {
+    q: "Can you build cross-platform mobile apps for iOS and Android?",
+    a: "Yes! Using React Native and Expo, I build high-performance mobile applications that run smoothly on both iOS and Android. These include real-time push notifications, offline caching, native device access, secure authentication, and fluid animated interfaces."
   },
   {
     q: "How do you handle backend scalability and security?",
     a: "I design database schemas with indexed queries, normalized relational data, and row-level security. For APIs, I implement strict JWT/token authentication, CORS policies, rate limiting, and atomic transactions for sensitive operations like payment processing."
   },
   {
-    q: "Can you handle both the UI design and full backend implementation?",
-    a: "Yes, exactly like ProjectOne's full-service philosophy: I handle the end-to-end cycle. From user flow wireframing and responsive UI craft, to database modeling, third-party payment integration (Razorpay/Stripe), and production deployment."
-  },
-  {
-    q: "How quickly can you ship a functional MVP or custom web app?",
-    a: "Most custom web applications and MVPs can be built and deployed in 2 to 3 weeks of focused sprints, with clear milestones, clean Git commits, and zero communication barriers."
+    q: "How quickly can you ship a functional MVP or custom app?",
+    a: "Most custom web applications, mobile MVPs, and business platforms can be built and deployed in 2 to 3 weeks of focused sprints, with clear milestones, clean Git commits, and transparent async updates."
   },
   {
     q: "Do I get full ownership of the source code and repository?",
-    a: "100% yes. You receive complete ownership of the private Git repository, database migration scripts, environment variables, documentation, and automated deployment configurations. No lock-in, ever."
+    a: "100% yes. You receive complete ownership of the private Git repository, database migration scripts, environment variables, documentation, and automated deployment configurations. No vendor lock-in, ever."
   }
 ];
 
@@ -261,7 +261,7 @@ const VelVaultMockup = () => (
         <div className="flex items-start justify-between gap-1 mb-1">
           <div>
             <p className="text-[10px] font-black leading-tight text-white">SaaS UI Kit & API</p>
-            <p className="text-[8px] text-blue-200/70">Python • Django • React</p>
+            <p className="text-[8px] text-blue-200/70">Full-Stack Web • Fast APIs</p>
           </div>
           <span className="text-[11px] font-black text-[#C6FD50] font-mono">$29</span>
         </div>
@@ -335,7 +335,7 @@ const IndiagramMockup = () => (
       <div className="flex items-center gap-2 mt-1 text-[7.5px] text-slate-300">
         <span className="text-rose-400 font-bold">♥ 1,428</span>
         <span>💬 84</span>
-        <span className="ml-auto font-mono text-[7px] text-slate-400">Next.js + Expo</span>
+        <span className="ml-auto font-mono text-[7px] text-slate-400">iOS, Android &amp; Web</span>
       </div>
     </div>
 
@@ -540,6 +540,7 @@ export default function HomePage({ initialSection = null }) {
     <div className={`min-h-screen font-sans antialiased ${isDarkMode ? 'dark text-[#FAFAFA]' : 'text-[#131311]'}`}>
       <Header activeSection={activeSection} onNavigate={scrollTo} />
 
+      <main id="main-content">
       {/* ══════════════════════════════════════════════════════════════
           1. HERO SECTION (Exact ProjectOne recreation with floating mockups)
           ══════════════════════════════════════════════════════════════ */}
@@ -557,10 +558,10 @@ export default function HomePage({ initialSection = null }) {
             <div className="flex flex-col items-center justify-center gap-2">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#131311] text-white text-[11px] sm:text-[12px] font-bold tracking-tight shadow-sm">
                 <span className="flex h-2 w-2 rounded-full bg-[#C6FD50] animate-pulse" />
-                <span>Full Stack Python & React Expert</span>
+                <span>Full-Stack & Mobile Developer • AI-Powered Speed</span>
               </div>
               <p className="text-[11.5px] sm:text-[12px] font-[800] uppercase tracking-[0.2em] text-[#131311] dark:text-[#B9B9B7]">
-                ONE DEVELOPER. FULL STACK. DONE RIGHT.
+                ONE DEVELOPER. WEB, MOBILE & AI. SHIPPED FAST.
               </p>
             </div>
           </FadeUp>
@@ -568,14 +569,15 @@ export default function HomePage({ initialSection = null }) {
           {/* Main Massive Headline */}
           <FadeUp delay={0.1} immediate={true}>
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[76px] xl:text-[84px] font-[900] tracking-[-0.035em] leading-[0.94] text-[#131311] dark:text-[#FAFAFA] mt-4 mb-5">
-              Your Web App,<br />Handled.
+              Your Web &amp; Mobile App,<br />Handled.
+              <span className="sr-only"> — Muhammed Shan, Full-Stack &amp; Mobile Software Engineer</span>
             </h1>
           </FadeUp>
 
           {/* Hero Description */}
           <FadeUp delay={0.15} immediate={true}>
             <p className="text-[15px] sm:text-[17px] md:text-[18px] leading-relaxed text-[#2E2E2B] dark:text-[#B9B9B7] max-w-lg mx-auto mb-8 font-normal">
-              A custom-built web application, live in weeks, not months. No junior freelancers. No bloated templates. No hassles, and no more sending people to broken links and hoping for the best.
+              A custom-built web application or cross-platform mobile app, live in weeks, not months. Leveraging modern engineering and supercharged AI workflows to build, ship, and scale your product with zero friction, no bloated agencies, and no excuses.
             </p>
           </FadeUp>
 
@@ -642,7 +644,7 @@ export default function HomePage({ initialSection = null }) {
                 Indiagram
               </p>
               <span className="text-[9px] font-mono font-bold text-[#41413E] dark:text-[#B9B9B7]">
-                Social App
+                Social &amp; Mobile
               </span>
             </div>
           </div>
@@ -767,7 +769,7 @@ export default function HomePage({ initialSection = null }) {
                 </div>
                 <div className="mt-2 px-0.5 flex items-center justify-between">
                   <p className="text-[13px] font-[800] text-[#131311] dark:text-[#FAFAFA]">Indiagram</p>
-                  <span className="text-[9px] font-mono font-bold text-[#41413E] dark:text-[#B9B9B7]">Social App</span>
+                  <span className="text-[9px] font-mono font-bold text-[#41413E] dark:text-[#B9B9B7]">Social &amp; Mobile</span>
                 </div>
               </div>
             </div>
@@ -821,10 +823,10 @@ export default function HomePage({ initialSection = null }) {
               Sound Familiar?
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-[900] tracking-tight leading-tight text-[#131311] dark:text-[#FAFAFA]">
-              Web Development Shouldn’t Feel Like an Endless Struggle.
+              Web &amp; Mobile Development Shouldn’t Feel Like an Endless Struggle.
             </h2>
             <p className="mt-4 text-[15px] sm:text-[16px] text-[#2E2E2B] dark:text-[#B9B9B7] leading-relaxed">
-              You’ve got a product to launch. You shouldn’t have to spend your weekends debugging SQL models, fixing CSS alignment, wrestling with broken webhooks, or chasing down freelancers who disappeared.
+              You’ve got a product to launch. You shouldn’t have to spend your weekends debugging SQL models, fixing broken mobile builds, fighting slow manual boilerplate, or chasing down freelancers who disappeared.
             </p>
           </div>
         </FadeUp>
@@ -833,12 +835,12 @@ export default function HomePage({ initialSection = null }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
             { title: "Fragile Freelancer Code", desc: "The last developer built on fragile hacks that break under real user load." },
-            { title: "Database Architecture", desc: "Un-indexed queries, missing foreign keys, and zero relational scaling." },
-            { title: "Payment Webhook Failures", desc: "Stuck transactions and broken Razorpay/Stripe webhooks losing revenue." },
             { title: "Broken on Mobile", desc: "Looked acceptable on desktop until opened on an iPhone or Android." },
+            { title: "Stuck in Single Stacks", desc: "Developers locked into one rigid framework unable to adapt to your actual product needs." },
+            { title: "Slow Manual Velocity", desc: "Weeks wasted writing routine boilerplate that modern AI tooling builds in minutes." },
+            { title: "Payment Webhook Failures", desc: "Stuck transactions and broken Razorpay/Stripe webhooks losing revenue." },
             { title: "Agency Telephone Game", desc: "Paying for 4 account managers while actual junior coders stumble along." },
             { title: "Slow Clunky APIs", desc: "Endpoints that take 3+ seconds to respond and stall the user interface." },
-            { title: "Zero Documentation", desc: "No Git branch strategy, no environment variable guides, and complete lock-in." },
             { title: "Endless Project Delays", desc: "A 'two-week sprint' that stretches into 6 months of lost opportunity." },
           ].map((item, i) => (
             <FadeUp key={item.title} delay={i * 0.04}>
@@ -880,10 +882,10 @@ export default function HomePage({ initialSection = null }) {
               The Antidote
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-[900] tracking-tight text-[#131311] dark:text-[#FAFAFA]">
-              We Make Launching Custom Web Apps Insanely Simple.
+              We Make Launching Web &amp; Mobile Products Insanely Simple.
             </h2>
             <p className="mt-3 text-[15px] sm:text-[16px] text-[#2E2E2B] dark:text-[#B9B9B7]">
-              One senior developer. No junior handoffs. No excuses.
+              One senior developer powered by modern AI velocity. No junior handoffs. No excuses.
             </p>
           </div>
         </FadeUp>
@@ -893,26 +895,26 @@ export default function HomePage({ initialSection = null }) {
             {
               icon: Code2,
               step: "ONE",
-              title: "Senior Full Stack Dev",
-              desc: "Deep Python/Django backend architecture paired with modern React/Next.js UI. No fragmented handoffs.",
+              title: "Full-Stack & Mobile Dev",
+              desc: "Cross-platform mobile apps (iOS & Android) and high-converting web applications. One unified builder with zero fragmented handoffs.",
             },
             {
               icon: Zap,
               step: "ONE",
-              title: "Strategic Business Engine",
-              desc: "Not a static brochure. A transactional, authenticated web application built to convert users and scale.",
+              title: "AI-Supercharged Velocity",
+              desc: "Leveraging advanced AI developer tools and autonomous agents to ship clean production code 5x faster with zero boilerplate.",
             },
             {
               icon: ShieldCheck,
               step: "ONE",
               title: "Direct Point of Contact",
-              desc: "Talk directly to the person writing every line of code. Daily async updates and clear Git milestone logs.",
+              desc: "Talk directly to the engineer writing every line of code. Daily async updates and clear Git milestone staging previews.",
             },
             {
               icon: Boxes,
               step: "ONE",
               title: "Production Ready Codebase",
-              desc: "100% owned by you. Clean Git repo, relational DB migrations, environment setups, and zero vendor lock-in.",
+              desc: "100% owned by you. Clean Git repo, multi-stack flexibility, cloud deployments, and zero vendor lock-in.",
             },
           ].map((item, idx) => {
             const Icon = item.icon;
@@ -948,13 +950,13 @@ export default function HomePage({ initialSection = null }) {
               Why Partner With Me?
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-[900] tracking-tight text-[#131311] dark:text-[#FAFAFA]">
-              Engineering Precision. Full-Stack Mastery.
+              Multi-Stack Agility. AI-Powered Velocity.
             </h2>
             <p className="mt-3 text-[15px] sm:text-[16px] text-[#2E2E2B] dark:text-[#B9B9B7] max-w-2xl mx-auto">
-              You don’t just get code—you get scalable architecture, sub-second APIs, and pixel-perfect UI engineered to take your product from idea to production.
+              You don’t just get code—you get rapid execution across web and mobile, sub-second APIs, and intelligent AI features engineered to take your product from idea to production.
             </p>
             <p className="font-handwriting text-xl text-[#131311] dark:text-[#C6FD50] mt-3 -rotate-2 select-none">
-              "Built to perform under real production traffic!"
+              "Built to perform under real production traffic across Web, iOS &amp; Android!"
             </p>
           </div>
         </FadeUp>
@@ -964,23 +966,23 @@ export default function HomePage({ initialSection = null }) {
           {[
             {
               step: "01",
-              title: "End-to-End Ownership",
-              desc: "From database normalization and relational modeling to API endpoints, payment webhooks, and responsive frontend interaction—handled cleanly without lost context.",
+              title: "Web & Mobile Ownership",
+              desc: "From database architecture and API backends to responsive web apps and cross-platform mobile apps (iOS & Android)—handled cleanly without lost context.",
             },
             {
               step: "02",
-              title: "Senior Code Standards",
-              desc: "Zero fragile hacks or junior bloat. Indexed PostgreSQL queries, strict JWT auth, atomic transaction safety, and clean Git conventional commits.",
+              title: "AI-Supercharged Speed",
+              desc: "Deep proficiency with modern AI developer tools, autonomous coding agents, and LLM workflows to accelerate engineering and ship in days instead of months.",
             },
             {
               step: "03",
-              title: "Direct Async Velocity",
-              desc: "Collaborate directly with the engineer writing every line of code. Fast turnaround, transparent daily progress logs, and clear milestone staging previews.",
+              title: "Multi-Stack Agility",
+              desc: "Not trapped in one framework. Fluent across Python/Django, Node.js, React/Next.js, React Native/Expo, PostgreSQL, MongoDB, and Supabase.",
             },
             {
               step: "04",
               title: "100% Code Ownership",
-              desc: "You retain full ownership of the private Git repository, database migration scripts, environment variables, and deployment pipelines. Zero lock-in.",
+              desc: "You retain full ownership of the private Git repository, app store assets, database migration scripts, environment variables, and deployment pipelines. Zero lock-in.",
             },
           ].map((item, i) => (
             <FadeUp key={item.step} delay={i * 0.05}>
@@ -1014,7 +1016,7 @@ export default function HomePage({ initialSection = null }) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Domain 1: Backend Architecture */}
+            {/* Domain 1: Multi-Stack Backend Architecture */}
             <div className="card-projectone p-7 bg-white dark:bg-[#161714] flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between pb-4 mb-4 border-b border-[#131311]/15 dark:border-white/15">
@@ -1023,22 +1025,22 @@ export default function HomePage({ initialSection = null }) {
                       <Server size={22} strokeWidth={2.2} />
                     </div>
                     <div>
-                      <h3 className="font-extrabold text-[18px] text-[#131311] dark:text-[#FAFAFA]">Backend Architecture & APIs</h3>
-                      <p className="text-[11px] text-[#41413E] dark:text-[#B9B9B7]">Python, Django, DRF, Node.js & REST</p>
+                      <h3 className="font-extrabold text-[18px] text-[#131311] dark:text-[#FAFAFA]">Backend Architecture &amp; APIs</h3>
+                      <p className="text-[11px] text-[#41413E] dark:text-[#B9B9B7]">Python, Django, Node.js, Express &amp; REST/GraphQL</p>
                     </div>
                   </div>
                   <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-[#C6FD50] text-[#131311] border border-[#131311]">
-                    Core
+                    Multi-Stack
                   </span>
                 </div>
 
                 <p className="text-[13px] text-[#2E2E2B] dark:text-[#B9B9B7] leading-relaxed mb-5">
-                  Architecting high-throughput server systems, modular monolithic codebases, and sub-second RESTful endpoints. Specializing in Python & Django with complex relational models and automated business logic.
+                  Architecting high-throughput server systems, modular codebases, and sub-second RESTful endpoints. Selecting the optimal backend stack—from Python &amp; Django to Node.js and Express.
                 </p>
 
                 <div className="space-y-2 mb-6">
                   {[
-                    "Django REST Framework (DRF) with custom serialization and viewsets",
+                    "Django REST Framework & Node.js Express API architecture with custom serialization",
                     "JWT token authentication, session management, and granular permission classes",
                     "Razorpay & Stripe payment gateway integration with signature verification webhooks",
                     "Background task processing with Celery/Redis for emails and long-running jobs",
@@ -1054,7 +1056,7 @@ export default function HomePage({ initialSection = null }) {
               </div>
 
               <div className="flex flex-wrap gap-1.5 pt-4 border-t border-dashed border-[#131311]/15 dark:border-white/15">
-                {["Python", "Django", "Django REST", "Node.js", "Express", "REST APIs", "Celery", "JWT Auth"].map((t) => (
+                {["Python", "Django", "Node.js", "Express", "REST APIs", "GraphQL", "Celery", "JWT Auth"].map((t) => (
                   <span key={t} className="text-[10px] font-bold uppercase px-2.5 py-1 rounded border border-[#131311]/20 dark:border-white/20 bg-[#F3F2EA] dark:bg-white/5 text-[#131311] dark:text-[#FAFAFA]">
                     {t}
                   </span>
@@ -1062,34 +1064,34 @@ export default function HomePage({ initialSection = null }) {
               </div>
             </div>
 
-            {/* Domain 2: Modern Frontend & Reactive UI */}
+            {/* Domain 2: Web & Mobile App Development */}
             <div className="card-projectone p-7 bg-white dark:bg-[#161714] flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between pb-4 mb-4 border-b border-[#131311]/15 dark:border-white/15">
                   <div className="flex items-center gap-3">
                     <div className="p-2.5 rounded-[10px] border border-[#131311] dark:border-white/20 bg-[#F3F2EA] dark:bg-[#20201D] text-[#131311] dark:text-[#C6FD50]">
-                      <Code2 size={22} strokeWidth={2.2} />
+                      <Smartphone size={22} strokeWidth={2.2} />
                     </div>
                     <div>
-                      <h3 className="font-extrabold text-[18px] text-[#131311] dark:text-[#FAFAFA]">Modern Frontend & Reactive UI</h3>
-                      <p className="text-[11px] text-[#41413E] dark:text-[#B9B9B7]">React 19, Next.js, Tailwind & Motion</p>
+                      <h3 className="font-extrabold text-[18px] text-[#131311] dark:text-[#FAFAFA]">Web &amp; Mobile App Development</h3>
+                      <p className="text-[11px] text-[#41413E] dark:text-[#B9B9B7]">React 19, Next.js, React Native, Expo, iOS &amp; Android</p>
                     </div>
                   </div>
                   <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-[#131311] text-[#C6FD50] border border-[#131311]">
-                    Pixel-Perfect
+                    Cross-Platform
                   </span>
                 </div>
 
                 <p className="text-[13px] text-[#2E2E2B] dark:text-[#B9B9B7] leading-relaxed mb-5">
-                  Building fluid, responsive user interfaces that delight users and drive conversion. Combining micro-animations, accessible state management, and modern component architecture.
+                  Building fluid, responsive web applications and native-feel cross-platform mobile apps for iOS and Android. Combining micro-animations, offline state sync, and native device hardware.
                 </p>
 
                 <div className="space-y-2 mb-6">
                   {[
+                    "Cross-platform mobile apps with React Native & Expo for iOS and Android app stores",
                     "Next.js and React 19 component trees with client/server state separation",
-                    "Custom Tailwind CSS design systems with consistent typography and tokens",
-                    "Framer Motion layout transitions, gestural interactions, and spring physics",
-                    "Mobile-first responsive architecture tested across iOS Safari and Chrome",
+                    "Offline-first architecture, push notifications, and native device camera/media access",
+                    "Custom Tailwind CSS design systems with consistent mobile and desktop UX tokens",
                   ].map((feat, idx) => (
                     <div key={idx} className="flex items-start gap-2 text-[12px] text-[#1A1A18] dark:text-[#E0E0DE]">
                       <span className="flex items-center justify-center w-4 h-4 rounded bg-[#131311] text-[#C6FD50] shrink-0 font-bold text-[9px] mt-0.5">
@@ -1102,7 +1104,7 @@ export default function HomePage({ initialSection = null }) {
               </div>
 
               <div className="flex flex-wrap gap-1.5 pt-4 border-t border-dashed border-[#131311]/15 dark:border-white/15">
-                {["React 19", "Next.js", "TypeScript", "JavaScript (ES6+)", "Tailwind CSS", "Framer Motion", "UI Systems"].map((t) => (
+                {["React 19", "React Native", "Expo", "Next.js", "iOS & Android", "TypeScript", "Tailwind CSS", "Mobile UX"].map((t) => (
                   <span key={t} className="text-[10px] font-bold uppercase px-2.5 py-1 rounded border border-[#131311]/20 dark:border-white/20 bg-[#F3F2EA] dark:bg-white/5 text-[#131311] dark:text-[#FAFAFA]">
                     {t}
                   </span>
@@ -1110,7 +1112,55 @@ export default function HomePage({ initialSection = null }) {
               </div>
             </div>
 
-            {/* Domain 3: Databases, Cloud & Security */}
+            {/* Domain 3: AI Tooling, Agents & Intelligent Systems */}
+            <div className="card-projectone p-7 bg-white dark:bg-[#161714] flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between pb-4 mb-4 border-b border-[#131311]/15 dark:border-white/15">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2.5 rounded-[10px] border border-[#131311] dark:border-white/20 bg-[#F3F2EA] dark:bg-[#20201D] text-[#131311] dark:text-[#C6FD50]">
+                      <Bot size={22} strokeWidth={2.2} />
+                    </div>
+                    <div>
+                      <h3 className="font-extrabold text-[18px] text-[#131311] dark:text-[#FAFAFA]">AI Tooling &amp; Intelligent Workflows</h3>
+                      <p className="text-[11px] text-[#4F4F4C] dark:text-[#B9B9B7]">AI Coding Agents, OpenAI, Gemini, Whisper &amp; npm CLI</p>
+                    </div>
+                  </div>
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded bg-[#5DB7B7] text-[#131311] border border-[#131311]">
+                    AI-Native
+                  </span>
+                </div>
+
+                <p className="text-[13px] text-[#2E2E2B] dark:text-[#B9B9B7] leading-relaxed mb-5">
+                  Supercharging engineering with cutting-edge AI tools, building autonomous developer tools, and integrating intelligent LLM capabilities into production apps.
+                </p>
+
+                <div className="space-y-2 mb-6">
+                  {[
+                    "10x engineering velocity leveraging modern AI coding agents and automated scaffolding",
+                    "OpenAI & Google Gemini API integrations with structured JSON streaming",
+                    "Author of published npm packages with interactive CLI prompts (findiff)",
+                    "Real-time audio-to-text processing pipelines with OpenAI Whisper",
+                  ].map((feat, idx) => (
+                    <div key={idx} className="flex items-start gap-2 text-[12px] text-[#1A1A18] dark:text-[#E0E0DE]">
+                      <span className="flex items-center justify-center w-4 h-4 rounded bg-[#131311] text-[#C6FD50] shrink-0 font-bold text-[9px] mt-0.5">
+                        ✓
+                      </span>
+                      <span>{feat}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-1.5 pt-4 border-t border-dashed border-[#131311]/15 dark:border-white/15">
+                {["AI Tools", "Autonomous Agents", "OpenAI API", "Google Gemini", "Whisper STT", "npm CLI", "Prompt Engineering", "LLM Workflows"].map((t) => (
+                  <span key={t} className="text-[10px] font-bold uppercase px-2.5 py-1 rounded border border-[#131311]/20 dark:border-white/20 bg-[#F3F2EA] dark:bg-white/5 text-[#131311] dark:text-[#FAFAFA]">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Domain 4: Databases, Cloud & Security */}
             <div className="card-projectone p-7 bg-white dark:bg-[#161714] flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between pb-4 mb-4 border-b border-[#131311]/15 dark:border-white/15">
@@ -1119,8 +1169,8 @@ export default function HomePage({ initialSection = null }) {
                       <Database size={22} strokeWidth={2.2} />
                     </div>
                     <div>
-                      <h3 className="font-extrabold text-[18px] text-[#131311] dark:text-[#FAFAFA]">Databases, Cloud & Security</h3>
-                      <p className="text-[11px] text-[#4F4F4C] dark:text-[#B9B9B7]">PostgreSQL, MongoDB, Supabase & AWS</p>
+                      <h3 className="font-extrabold text-[18px] text-[#131311] dark:text-[#FAFAFA]">Databases, Cloud &amp; Security</h3>
+                      <p className="text-[11px] text-[#4F4F4C] dark:text-[#B9B9B7]">PostgreSQL, MongoDB, Supabase &amp; AWS</p>
                     </div>
                   </div>
                   <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-[#F3F2EA] dark:bg-white/10 text-[#131311] dark:text-white border border-[#131311]">
@@ -1157,54 +1207,6 @@ export default function HomePage({ initialSection = null }) {
                 ))}
               </div>
             </div>
-
-            {/* Domain 4: AI Systems & Developer Tooling */}
-            <div className="card-projectone p-7 bg-white dark:bg-[#161714] flex flex-col justify-between">
-              <div>
-                <div className="flex items-center justify-between pb-4 mb-4 border-b border-[#131311]/15 dark:border-white/15">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-[10px] border border-[#131311] dark:border-white/20 bg-[#F3F2EA] dark:bg-[#20201D] text-[#131311] dark:text-[#C6FD50]">
-                      <TerminalSquare size={22} strokeWidth={2.2} />
-                    </div>
-                    <div>
-                      <h3 className="font-extrabold text-[18px] text-[#131311] dark:text-[#FAFAFA]">AI Systems & Developer Tooling</h3>
-                      <p className="text-[11px] text-[#4F4F4C] dark:text-[#B9B9B7]">OpenAI, Gemini, Whisper & npm CLI</p>
-                    </div>
-                  </div>
-                  <span className="text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded bg-[#5DB7B7] text-[#131311] border border-[#131311]">
-                    Next-Gen
-                  </span>
-                </div>
-
-                <p className="text-[13px] text-[#2E2E2B] dark:text-[#B9B9B7] leading-relaxed mb-5">
-                  Integrating intelligent machine learning capabilities into production web products and building specialized developer productivity tools published to npm.
-                </p>
-
-                <div className="space-y-2 mb-6">
-                  {[
-                    "OpenAI & Google Gemini API integrations with structured JSON streaming",
-                    "Real-time audio-to-text processing pipelines with OpenAI Whisper",
-                    "Author of published npm packages with interactive CLI prompts (findiff)",
-                    "Automated git diff analysis and conventional commit generation engines",
-                  ].map((feat, idx) => (
-                    <div key={idx} className="flex items-start gap-2 text-[12px] text-[#1A1A18] dark:text-[#E0E0DE]">
-                      <span className="flex items-center justify-center w-4 h-4 rounded bg-[#131311] text-[#C6FD50] shrink-0 font-bold text-[9px] mt-0.5">
-                        ✓
-                      </span>
-                      <span>{feat}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-1.5 pt-4 border-t border-dashed border-[#131311]/15 dark:border-white/15">
-                {["OpenAI", "Google Gemini", "Whisper STT", "npm Package CLI", "Git Tooling", "Prompt Architecture", "Linux"].map((t) => (
-                  <span key={t} className="text-[10px] font-bold uppercase px-2.5 py-1 rounded border border-[#131311]/20 dark:border-white/20 bg-[#F3F2EA] dark:bg-white/5 text-[#131311] dark:text-[#FAFAFA]">
-                    {t}
-                  </span>
-                ))}
-              </div>
-            </div>
           </div>
         </FadeUp>
 
@@ -1213,17 +1215,17 @@ export default function HomePage({ initialSection = null }) {
           <div className="p-4 sm:p-5 rounded-[14px] border-[1.5px] border-[#131311] dark:border-white/20 bg-white dark:bg-[#1C1D1A] flex flex-wrap items-center justify-around gap-4 shadow-[3px_3px_0px_0px_#131311] dark:shadow-none text-center">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#131311] dark:bg-[#C6FD50] border border-[#131311]" />
-              <span className="text-[12px] font-bold uppercase tracking-wider text-[#131311] dark:text-[#FAFAFA]">Sub-Second API Responses</span>
+              <span className="text-[12px] font-bold uppercase tracking-wider text-[#131311] dark:text-[#FAFAFA]">Web &amp; Mobile Cross-Platform</span>
             </div>
             <div className="hidden sm:block h-4 w-px bg-[#131311]/20 dark:bg-white/20" />
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#131311] dark:bg-[#C6FD50] border border-[#131311]" />
-              <span className="text-[12px] font-bold uppercase tracking-wider text-[#131311] dark:text-[#FAFAFA]">Row-Level Database Security</span>
+              <span className="text-[12px] font-bold uppercase tracking-wider text-[#131311] dark:text-[#FAFAFA]">AI-Supercharged Velocity</span>
             </div>
             <div className="hidden md:block h-4 w-px bg-[#131311]/20 dark:bg-white/20" />
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-[#131311] dark:bg-[#C6FD50] border border-[#131311]" />
-              <span className="text-[12px] font-bold uppercase tracking-wider text-[#131311] dark:text-[#FAFAFA]">Razorpay Entitlement Systems</span>
+              <span className="text-[12px] font-bold uppercase tracking-wider text-[#131311] dark:text-[#FAFAFA]">Multi-Stack Agility</span>
             </div>
             <div className="hidden lg:block h-4 w-px bg-[#131311]/20 dark:bg-white/20" />
             <div className="flex items-center gap-2">
@@ -1450,13 +1452,14 @@ export default function HomePage({ initialSection = null }) {
             <div className="card-projectone overflow-hidden p-3 bg-white dark:bg-[#161714]">
               <img
                 src={ImageHero}
-                alt="Muhammed Shan"
+                alt="Muhammed Shan — Full Stack & Mobile Engineer | AI-Powered Velocity"
                 className="w-full h-80 object-cover rounded-[10px]"
+                loading="lazy"
               />
               <div className="pt-3 px-2 flex items-center justify-between">
                 <div>
                   <h4 className="font-bold text-sm text-[#131311] dark:text-[#FAFAFA]">Muhammed Shan</h4>
-                  <p className="text-[11px] text-[#41413E] dark:text-[#B9B9B7]">Full Stack Developer</p>
+                  <p className="text-[11px] text-[#41413E] dark:text-[#B9B9B7]">Full Stack &amp; Mobile Engineer</p>
                 </div>
                 <span className="w-2.5 h-2.5 rounded-full bg-[#C6FD50] border border-[#131311]" />
               </div>
@@ -1469,10 +1472,10 @@ export default function HomePage({ initialSection = null }) {
                 "When your software foundation is rock solid, everything shifts."
               </h3>
               <p className="text-[15px] leading-relaxed text-[#2E2E2B] dark:text-[#B9B9B7] mb-4">
-                I am a Full Stack Developer & Creative Builder dedicated to engineering web applications that feel fast, intelligent, and visually striking. I combine clean Python & React engineering with thoughtful design to build software that solves real business problems.
+                I am a Full Stack &amp; Mobile Engineer and Creative Builder dedicated to shipping web and mobile applications that feel lightning fast, intelligent, and visually striking. I work fluidly across multiple modern tech stacks—from robust backends (Python, Django, Node.js) to reactive web interfaces (React 19, Next.js) and cross-platform mobile apps (React Native &amp; Expo for iOS &amp; Android).
               </p>
               <p className="text-[15px] leading-relaxed text-[#2E2E2B] dark:text-[#B9B9B7] mb-6">
-                From scalable Django and Node.js backend systems with complex database relationships, to modern interactive interfaces with delightful micro-interactions, I treat every project as a flagship.
+                By mastering cutting-edge AI coding tools, autonomous agents, and intelligent LLM workflows, I deliver production-grade software at 5x traditional velocity without compromising architectural depth, type safety, or security.
               </p>
 
               <div className="flex flex-wrap gap-4 pt-4 border-t border-dashed border-[#131311]/20 dark:border-white/20">
@@ -1483,7 +1486,7 @@ export default function HomePage({ initialSection = null }) {
                 <div className="h-8 w-px bg-[#131311]/15 dark:bg-white/15" />
                 <div>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-[#4F4F4C] dark:text-[#B9B9B7]">Focus</span>
-                  <p className="text-sm font-bold mt-0.5 text-[#131311] dark:text-[#FAFAFA]">Python · Django · React · APIs · PostgreSQL</p>
+                  <p className="text-sm font-bold mt-0.5 text-[#131311] dark:text-[#FAFAFA]">Web Apps · Mobile (iOS &amp; Android) · AI Tools · Full-Stack APIs</p>
                 </div>
               </div>
             </div>
@@ -1679,6 +1682,7 @@ export default function HomePage({ initialSection = null }) {
           </FadeUp>
         )}
       </section>
+      </main>
 
       <Footer />
     </div>

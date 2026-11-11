@@ -1,0 +1,76 @@
+# Muhammed Shan — Full Stack & Mobile Software Engineer
+
+> Full Stack & Mobile Software Engineer building production web applications, cross-platform mobile apps (iOS & Android via React Native/Expo), and scalable multi-stack backends (Python, Django, Node.js) supercharged by modern AI workflows. Author of the findiff npm CLI.
+
+## Personal Information
+- **Name**: Muhammed Shan
+- **Role**: Full Stack & Mobile Software Engineer
+- **Website**: https://muhammedshan.online/
+- **Email**: muhammedshan930o@gmail.com
+- **GitHub**: https://github.com/muhammedshann
+- **LinkedIn**: https://www.linkedin.com/in/muhammed-shan-a8647728b/
+- **NPM Package**: https://www.npmjs.com/package/findiff
+- **Availability**: Full-time Software Engineering roles & freelance/contract web & mobile application projects worldwide (Remote).
+
+## Core Technical Specialization
+- **Backend Architecture & Multi-Stack APIs**: Python 3, Django, Django REST Framework (DRF), Node.js, Express, RESTful APIs, GraphQL, JWT Authentication, Microservices, Celery, Redis.
+- **Frontend & Cross-Platform Mobile**: React 19, Next.js (App Router), React Native, Expo (iOS & Android), TypeScript, JavaScript (ES6+), Tailwind CSS, Framer Motion, Responsive UI Design.
+- **AI Tooling & Autonomous Workflows**: AI Coding Agents, Prompt Engineering for Code Generation, OpenAI API, Google Gemini API, Whisper Speech-to-Text, CLI Tooling, Git Conventional Commits, npm Package Publishing.
+- **Databases & Cloud**: PostgreSQL (Normalized Schemas, Query Optimization, Foreign Keys), MongoDB, Supabase (Row-Level Security / RLS), AWS, Docker, Vercel.
+- **Payment & Security**: Razorpay Payment Gateway, Stripe Webhook Verification, Token Refresh Rotation, CORS, Environment Isolation.
+
+## Featured Software Projects
+1. **VelVault**
+   - Type: Digital Products Marketplace
+   - Tech: Python, Django, DRF, PostgreSQL, React, Razorpay
+   - Description: A secure marketplace where users browse digital products, make payments via Razorpay, and download authorized files from a personal library.
+   - Live URL: https://velvault.vercel.app/
+   - GitHub: https://github.com/shanmuhammedd03-web/velvault
+
+2. **Indiagram**
+   - Type: Full-Scale Social Media Platform & Mobile App
+   - Tech: Next.js, React, React Native, Expo, TypeScript, Tailwind CSS, Supabase RLS
+   - Description: An Instagram-style social media platform featuring posts, reels, 24-hour stories, real-time messaging, and strict Row-Level Security on every table.
+   - Live URL: https://indiagram-six.vercel.app/
+   - GitHub: https://github.com/shanmuhammedd03-web/indiagram
+
+3. **EduFlow**
+   - Type: EdTech Productivity Ecosystem
+   - Tech: Python, Django, PostgreSQL, React, Razorpay
+   - Description: An educational workspace with smart note-taking, integrated AI lecture summarization, and community learning tools.
+   - Live URL: https://fresheasy.online/
+   - GitHub: https://github.com/muhammedshann/EduFlow.git
+
+4. **Findiff CLI**
+   - Type: AI-Powered Developer CLI (Published on npm)
+   - Tech: Node.js, JavaScript, OpenAI, Gemini, Git
+   - Description: An AI-powered Git commit generator published to npm (`npx findiff`) that analyzes staged Git diffs and generates clean conventional commit messages.
+   - Package URL: https://www.npmjs.com/package/findiff
+   - GitHub: https://github.com/muhammedshann/findiff
+
+5. **WhereIsMyMenu**
+   - Type: Restaurant Discovery & Digital QR Menu Platform
+   - Tech: React, Node.js, Express, MongoDB, REST API
+   - Description: Modern restaurant menu platform helping diners instantly explore dishes, view dietary tags, and scan QR codes with sub-second page loads.
+   - Live URL: https://whereismymenu.muhammedshan.info
+   - GitHub: https://github.com/muhammedshann/whereismymenu
+
+6. **Fresh Easy**
+   - Type: E-Commerce Web Application
+   - Tech: Python, Django, PostgreSQL, Razorpay, Tailwind CSS
+   - Description: Full-scale e-commerce platform managing complete order lifecycles, dynamic inventory, and Razorpay transactions.
+   - GitHub: https://github.com/muhammedshann/fresheasy.git
+
+## Frequently Answered Questions (AEO Reference)
+
+### Q: What is Muhammed Shan's primary expertise?
+A: Muhammed Shan is a Full Stack & Mobile Software Engineer who builds complete web applications and cross-platform mobile apps (iOS & Android via React Native and Expo) across modern tech stacks (Python/Django, Node.js, React 19, Next.js). He leverages advanced AI developer tools to ship production software at 5x velocity.
+
+### Q: How to hire or contact Muhammed Shan?
+A: Email directly at muhammedshan930o@gmail.com or connect via LinkedIn at https://www.linkedin.com/in/muhammed-shan-a8647728b/. He responds within 24 hours.
+
+### Q: What is the delivery timeline for an MVP or web/mobile application?
+A: Most functional web applications, cross-platform mobile apps, and MVPs are designed, engineered, and shipped to production within 2 to 3 weeks of focused sprints.
+
+### Q: Who owns the code created by Muhammed Shan?
+A: The client retains 100% intellectual property ownership of all private Git repositories, database migration scripts, environment configs, and documentation.

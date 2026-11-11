@@ -18,7 +18,7 @@ export default function Footer() {
               <span>shan.</span>
             </div>
             <p className="text-[12px] mt-1 text-[#6C6C6A] dark:text-[#B9B9B7]">
-              Full Stack Python & React Engineer · Built with Framer aesthetic & Clean Code.
+              Full Stack &amp; Mobile Engineer · AI-Powered Web &amp; App Development.
             </p>
           </div>
 
@@ -65,7 +65,7 @@ export default function Footer() {
         {/* Bottom copyright line */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-[12px] text-[#6C6C6A] dark:text-[#B9B9B7] gap-3">
           <p>© {new Date().getFullYear()} Muhammed Shan. All rights reserved.</p>
-          <p className="font-mono text-[11px]">ONE Developer · Full Stack · Done Right</p>
+          <p className="font-mono text-[11px]">ONE Developer · Web, Mobile &amp; AI · Shipped Fast</p>
         </div>
       </div>
     </footer>
