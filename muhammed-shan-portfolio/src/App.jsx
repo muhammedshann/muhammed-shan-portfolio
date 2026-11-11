@@ -73,7 +73,8 @@ const IntroReel = ({ onDone }) => {
       return img.decode ? img.decode().catch(() => {}) : new Promise((r) => { img.onload = img.onerror = r; });
     });
     const font = document.fonts?.load ? document.fonts.load('400 100px "Anton"').catch(() => {}) : Promise.resolve();
-    const cap = new Promise((r) => setTimeout(r, 2500));
+    // Non-blocking quick start: cap wait at 100ms so intro begins immediately with zero loading lag
+    const cap = new Promise((r) => setTimeout(r, 100));
     Promise.race([Promise.all([...imgs, font]), cap]).then(() => alive && setReady(true));
     return () => { alive = false; };
   }, []);

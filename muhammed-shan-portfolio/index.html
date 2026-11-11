@@ -229,8 +229,11 @@
     </script>
   </head>
   <body>
-    <!-- React Root Container with Pre-rendered Semantic Fallback for Web Crawlers, Bots & Inspection Tools -->
-    <div id="root">
+    <!-- React Root Mount Point -->
+    <div id="root"></div>
+
+    <!-- Semantic Fallback for Search Crawlers, Non-JS Bots & Inspection Tools (SEO, AEO, AIO) -->
+    <noscript>
       <header>
         <nav aria-label="Main Navigation">
           <a href="#home"><strong>Muhammed Shan</strong> — Full Stack &amp; Mobile Engineer | AI-Powered Speed</a>
@@ -391,14 +394,6 @@
         <p>&copy; 2026 Muhammed Shan. Built with React 19, React Native, Python &amp; Tailwind CSS. All rights reserved.</p>
         <p><a href="https://github.com/muhammedshann">GitHub</a> | <a href="https://www.linkedin.com/in/muhammed-shan-a8647728b/">LinkedIn</a> | <a href="https://www.npmjs.com/package/findiff">NPM</a></p>
       </footer>
-    </div>
-
-    <!-- Noscript Fallback -->
-    <noscript>
-      <div style="padding: 24px; text-align: center; font-family: sans-serif; background: #FAFAFA; color: #131311;">
-        <h2>JavaScript is disabled in your browser.</h2>
-        <p>You can still explore Muhammed Shan's portfolio, production projects, and contact info above, or email <a href="mailto:muhammedshan930o@gmail.com">muhammedshan930o@gmail.com</a>.</p>
-      </div>
     </noscript>
 
     <!-- React Application Entry Point -->
